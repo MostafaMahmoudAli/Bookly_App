@@ -5,6 +5,5 @@ ThemeData themeData = ThemeData(
   scaffoldBackgroundColor:kPrimaryColor,
   appBarTheme:AppBarTheme(
     backgroundColor:Colors.transparent,
-
   ),
 );
