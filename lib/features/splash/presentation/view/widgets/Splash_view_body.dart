@@ -50,7 +50,7 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
         ),
         // SizedBox(height:20.0.h,),
       ],
-    );git
+    );
   }
   void initSlidingAnimation()
   {

@@ -38,10 +38,14 @@ dependencies:
   bloc: ^8.1.1
   flutter_bloc: ^8.1.2
   flutter_screenutil: ^5.7.0
+  auto_route: ^6.4.0
+  font_awesome_flutter: ^10.4.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  auto_route_generator: ^6.2.0
+  build_runner: ^2.3.3
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
