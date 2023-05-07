@@ -20,7 +20,7 @@ class BooklyApp extends StatelessWidget {
     {
      return  MaterialApp(
        debugShowCheckedModeBanner:false,
-       theme:themeData,
+       theme:themeData(),
        home: const HomeScreen(),
      );
     });
