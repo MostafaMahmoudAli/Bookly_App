@@ -40,8 +40,11 @@ class HomeBodyScreen extends StatelessWidget {
               ),
             ),
         ),
-        const SliverFillRemaining(
-          child: BestSellerListViewItem(),
+         SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal:20.0.w,vertical:20.0.h, ),
+            child: const BestSellerListViewItem(),
+          ),
         ),
       ],
     );
