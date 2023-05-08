@@ -25,6 +25,11 @@ ThemeData themeData()=> ThemeData(
         fontWeight:FontWeight.bold,
         color:Colors.grey,
       ),
+      titleSmall:TextStyle(
+        fontSize:14.0.sp,
+        fontWeight:FontWeight.bold,
+        color:Colors.white,
+      ),
     ),
   ),
 );
