@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../../../../core/utils/componants.dart';
+
 class RowBookDetailsView extends StatelessWidget {
   const RowBookDetailsView({Key? key}) : super(key: key);
 
@@ -45,42 +47,28 @@ class RowBookDetailsView extends StatelessWidget {
         Row(
           mainAxisAlignment:MainAxisAlignment.center,
           children: [
-            Container(
-              width:MediaQuery.of(context).size.width*0.35,
-              height:MediaQuery.of(context).size.height*0.045,
-              decoration:BoxDecoration(
+            Expanded(
+              child: CustomActionButton(
+                text: "19.99",
                 borderRadius:BorderRadius.only(
-                  topLeft:Radius.circular(8.r),
-                  bottomLeft:Radius.circular(8.r),
-                ),
-                color:Colors.white,
-              ),
-              child:Center(
-                child: Text(
-                  "19.99",
-                  style:GoogleFonts.montserrat(
-                    textStyle:Theme.of(context).textTheme.titleLarge!.copyWith(color:Colors.black87),
-                  ),
-                ),
+    topLeft:Radius.circular(8.r),
+    bottomLeft:Radius.circular(8.r),
+    ) ,
+                backGroundColor:Colors.white,
+                textColor:Colors.black87,
+                onTap:(){},
               ),
             ),
-            Container(
-              width:MediaQuery.of(context).size.width*0.35,
-              height:MediaQuery.of(context).size.height*0.045,
-              decoration:BoxDecoration(
+            Expanded(
+              child: CustomActionButton(
+                text: "free preview",
                 borderRadius:BorderRadius.only(
                   topRight:Radius.circular(8.r),
                   bottomRight:Radius.circular(8.r),
-                ),
-                color:Colors.redAccent,
-              ),
-              child: Center(
-                child: Text(
-                  "free preview",
-                  style:GoogleFonts.montserrat(
-                    textStyle:Theme.of(context).textTheme.titleLarge!.copyWith(fontSize:14.0.sp),
-                  ),
-                ),
+                ) ,
+                backGroundColor:Colors.redAccent,
+                textColor:Colors.black87,
+                onTap:(){},
               ),
             ),
           ],
