@@ -3,6 +3,7 @@ import 'package:bookly_app/features/layout/presentation/views/widgets/home_body.
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -10,13 +11,17 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar:AppBar(
+        automaticallyImplyLeading:false,
         title:Image.asset(
             DataImages.logo,
           height:22.0.h,
         ),
         actions: [
           IconButton(
-            onPressed:(){},
+            onPressed:()
+            {
+              GoRouter.of(context).push("/SearchView");
+            },
             icon: const Icon(
             FontAwesomeIcons.magnifyingGlass,
               size:28.0,

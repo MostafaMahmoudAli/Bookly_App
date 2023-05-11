@@ -1,4 +1,4 @@
-import 'package:bookly_app/features/layout/presentation/views/widgets/row_book_details_view.dart';
+import 'package:bookly_app/features/book_details/presentation/views/widgets/row_book_details_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
