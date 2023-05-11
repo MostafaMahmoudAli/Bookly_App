@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'custom_list_view_item.dart';
+import '../../../../layout/presentation/views/widgets/custom_list_view_item.dart';
 
 class BookDetailsListView extends StatelessWidget {
   const BookDetailsListView({Key? key}) : super(key: key);
