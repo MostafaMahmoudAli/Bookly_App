@@ -11,13 +11,13 @@ class FeaturedListView extends StatelessWidget {
     return SizedBox(
       height: MediaQuery.of(context).size.height * .28,
       child: ListView.separated(
-        physics:const BouncingScrollPhysics(),
-        scrollDirection:Axis.horizontal,
-          itemBuilder: (context,index)=> const CustomListViewItem(),
-          separatorBuilder: (BuildContext context, int index)=>SizedBox(
-            width:10.0.w,
-          ),
-          itemCount: 10,
+        physics: const BouncingScrollPhysics(),
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context, index) => const CustomListViewItem(),
+        separatorBuilder: (BuildContext context, int index) => SizedBox(
+          width: 10.0.w,
+        ),
+        itemCount: 10,
       ),
     );
   }

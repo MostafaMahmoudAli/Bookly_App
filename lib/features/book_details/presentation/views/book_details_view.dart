@@ -8,16 +8,16 @@ class BookDetailsView extends StatelessWidget {
   const BookDetailsView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      body:Padding(
-        padding:  EdgeInsets.symmetric(horizontal:30.0.w,vertical: 30.0.h),
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 30.0.w, vertical: 30.0.h),
         child: Column(
           children: [
             const CustomBookDetailsAppBarView(),
             Padding(
-              padding:  EdgeInsets.symmetric(
-                  horizontal:MediaQuery.of(context).size.width*0.16,
-                vertical:MediaQuery.of(context).size.height*0.015,
+              padding: EdgeInsets.symmetric(
+                horizontal: MediaQuery.of(context).size.width * 0.16,
+                vertical: MediaQuery.of(context).size.height * 0.015,
               ),
               child: const CustomListViewItem(),
             ),
