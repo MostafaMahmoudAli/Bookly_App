@@ -13,7 +13,7 @@ class FeaturedListView extends StatelessWidget {
       child: ListView.separated(
         physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) => const CustomListViewItem(),
+        itemBuilder: (context, index) => const FeaturedListViewItem(),
         separatorBuilder: (BuildContext context, int index) => SizedBox(
           width: 10.0.w,
         ),
