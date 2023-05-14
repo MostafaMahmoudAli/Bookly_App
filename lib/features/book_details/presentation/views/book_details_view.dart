@@ -19,7 +19,7 @@ class BookDetailsView extends StatelessWidget {
                 horizontal: MediaQuery.of(context).size.width * 0.16,
                 vertical: MediaQuery.of(context).size.height * 0.015,
               ),
-              child: const CustomListViewItem(),
+              child: const FeaturedListViewItem(),
             ),
             const ColumnBookDetailsView(),
           ],
