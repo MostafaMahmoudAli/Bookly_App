@@ -10,11 +10,11 @@ class BookDetailsListView extends StatelessWidget {
     return SizedBox(
       height: MediaQuery.of(context).size.height * .15,
       child: ListView.separated(
-        physics:const BouncingScrollPhysics(),
-        scrollDirection:Axis.horizontal,
-        itemBuilder: (context,index)=> const CustomListViewItem(),
-        separatorBuilder: (BuildContext context, int index)=>SizedBox(
-          width:10.0.w,
+        physics: const BouncingScrollPhysics(),
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context, index) => const CustomListViewItem(),
+        separatorBuilder: (BuildContext context, int index) => SizedBox(
+          width: 10.0.w,
         ),
         itemCount: 10,
       ),

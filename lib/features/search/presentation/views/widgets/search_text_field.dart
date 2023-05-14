@@ -9,27 +9,25 @@ class SearchTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      decoration:InputDecoration(
-        hintText:"Search",
-        hintStyle:GoogleFonts.montserrat(
-          textStyle:Theme.of(context).textTheme.titleLarge,
+      decoration: InputDecoration(
+        hintText: "Search",
+        hintStyle: GoogleFonts.montserrat(
+          textStyle: Theme.of(context).textTheme.titleLarge,
         ),
         suffixIcon: Icon(
           FontAwesomeIcons.magnifyingGlass,
-          color:Colors.white,
-          size:18.0.sp,
+          color: Colors.white,
+          size: 18.0.sp,
         ),
-        enabledBorder:OutlineInputBorder(
-          borderRadius:BorderRadius.circular(12.r),
-          borderSide:BorderSide(
-            color:Colors.white.withOpacity(0.3),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12.r),
+          borderSide: BorderSide(
+            color: Colors.white.withOpacity(0.3),
           ),
         ),
-        focusedBorder:OutlineInputBorder(
-          borderRadius:BorderRadius.circular(12.r),
-          borderSide:BorderSide(
-              color:Colors.white
-          ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12.r),
+          borderSide: BorderSide(color: Colors.white),
         ),
       ),
     );

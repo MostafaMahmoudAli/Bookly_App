@@ -9,23 +9,22 @@ class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      appBar:AppBar(
-        automaticallyImplyLeading:false,
-        title:Image.asset(
-            DataImages.logo,
-          height:22.0.h,
+    return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: Image.asset(
+          DataImages.logo,
+          height: 22.0.h,
         ),
         actions: [
           IconButton(
-            onPressed:()
-            {
+            onPressed: () {
               GoRouter.of(context).push("/SearchView");
             },
             icon: const Icon(
-            FontAwesomeIcons.magnifyingGlass,
-              size:28.0,
-          ),
+              FontAwesomeIcons.magnifyingGlass,
+              size: 28.0,
+            ),
           ),
         ],
       ),

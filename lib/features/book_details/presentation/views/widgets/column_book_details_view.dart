@@ -10,40 +10,40 @@ class ColumnBookDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children:[
+      children: [
         Text(
           "dnvksdbvkndfn",
-          style:GoogleFonts.aBeeZee(
-            fontSize:20.0.sp,
+          style: GoogleFonts.aBeeZee(
+            fontSize: 20.0.sp,
           ),
         ),
         SizedBox(
-          height:MediaQuery.of(context).size.height*0.01,
+          height: MediaQuery.of(context).size.height * 0.01,
         ),
         Text(
           "j.ksmv",
-          style:GoogleFonts.montserrat(
-            textStyle:Theme.of(context).textTheme.titleMedium,
+          style: GoogleFonts.montserrat(
+            textStyle: Theme.of(context).textTheme.titleMedium,
           ),
         ),
         SizedBox(
-          height:MediaQuery.of(context).size.height*0.02,
+          height: MediaQuery.of(context).size.height * 0.02,
         ),
         const RowBookDetailsView(),
         SizedBox(
-          height:MediaQuery.of(context).size.height*0.07,
+          height: MediaQuery.of(context).size.height * 0.07,
         ),
         Align(
-          alignment:Alignment.topLeft,
+          alignment: Alignment.topLeft,
           child: Text(
             "you can also like",
-            style:GoogleFonts.montserrat(
-              textStyle:Theme.of(context).textTheme.titleSmall,
+            style: GoogleFonts.montserrat(
+              textStyle: Theme.of(context).textTheme.titleSmall,
             ),
           ),
         ),
         SizedBox(
-          height:MediaQuery.of(context).size.height*0.02,
+          height: MediaQuery.of(context).size.height * 0.02,
         ),
         const BookDetailsListView(),
       ],

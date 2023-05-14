@@ -12,34 +12,34 @@ class SearchView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:AppBar(
+      appBar: AppBar(
         title: Image.asset(
           DataImages.logo,
-          height:22.0.h,
+          height: 22.0.h,
         ),
       ),
-      body:SingleChildScrollView(
-        physics:const BouncingScrollPhysics(),
+      body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Padding(
-          padding:  EdgeInsets.symmetric(
-            vertical:20.h,
-            horizontal:20.w,
+          padding: EdgeInsets.symmetric(
+            vertical: 20.h,
+            horizontal: 20.w,
           ),
           child: Column(
-            crossAxisAlignment:CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-             const SearchTextField(),
+              const SearchTextField(),
               SizedBox(
-                height:MediaQuery.of(context).size.height*0.08,
+                height: MediaQuery.of(context).size.height * 0.08,
               ),
               Text(
                 "Search Results",
-                style:GoogleFonts.montserrat(
-                  textStyle:Theme.of(context).textTheme.titleLarge,
+                style: GoogleFonts.montserrat(
+                  textStyle: Theme.of(context).textTheme.titleLarge,
                 ),
               ),
               SizedBox(
-                height:MediaQuery.of(context).size.height*0.05,
+                height: MediaQuery.of(context).size.height * 0.05,
               ),
               const SearchListView(),
             ],
