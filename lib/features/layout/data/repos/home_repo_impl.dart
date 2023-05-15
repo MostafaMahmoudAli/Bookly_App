@@ -4,6 +4,8 @@ import 'package:bookly_app/features/layout/data/models/books_model/books_model.d
 import 'package:bookly_app/features/layout/data/repos/home_repo.dart';
 import 'package:dartz/dartz.dart';
 
+import '../../../../core/utils/end_points.dart';
+
 class HomeRepoImpl implements HomeRepo
 {
   final ApiService?apiService;
@@ -12,7 +14,7 @@ class HomeRepoImpl implements HomeRepo
   Future<Either<Failure,List<BooksModel>>> fetchNewestBooks()async{
     try
     {
-      var data = await apiService!.get(endPoint: "volumes?Filtering=free-ebooks&Sorting=newest &subject=&q=subject:history");
+      var data = await apiService!.get(endPoint:EndPoints.bookUrl);
       List<BooksModel>books=[];
       for(var item in data["item"])
       {
@@ -29,6 +31,8 @@ class HomeRepoImpl implements HomeRepo
   @override
   Future<Either<Failure, List<BooksModel>>> fetchFeaturedBooks() {
     throw UnimplementedError();
+    try{}
+    catch(e){}
   }
 
 }
