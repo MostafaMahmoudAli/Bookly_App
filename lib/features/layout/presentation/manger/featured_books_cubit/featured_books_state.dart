@@ -2,23 +2,25 @@ import 'package:equatable/equatable.dart';
 
 import '../../../data/models/books_model/books_model.dart';
 
-abstract class FeaturedBooksState extends Equatable
+abstract class FeaturedBooksStates extends Equatable
 {
-  const FeaturedBooksState();
+  const FeaturedBooksStates();
 
   @override
   List<Object> get props => [];
 }
 
-class FeaturedBooksLoadingState extends FeaturedBooksState{}
+class FeaturedBooksInitialState extends FeaturedBooksStates{}
 
-class FeaturedBooksSuccessState extends FeaturedBooksState
+class FeaturedBooksLoadingState extends FeaturedBooksStates{}
+
+class FeaturedBooksSuccessState extends FeaturedBooksStates
 {
   final List<BooksModel>featuredBooks;
-  const FeaturedBooksSuccessState(this.featuredBooks);
+   const FeaturedBooksSuccessState(this.featuredBooks);
 }
 
-class FeaturedBooksErrorState extends FeaturedBooksState
+class FeaturedBooksErrorState extends FeaturedBooksStates
 {
   final String error;
   const FeaturedBooksErrorState(this.error);
