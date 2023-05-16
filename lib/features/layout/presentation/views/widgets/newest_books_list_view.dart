@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'best_seller_item.dart';
+import 'newest_books_item.dart';
 
-class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({Key? key}) : super(key: key);
+class NewestBooksListViewItem extends StatelessWidget {
+  const NewestBooksListViewItem({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
       padding: EdgeInsets.zero,
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
-      itemBuilder: (context, index) => const BestSellerItem(),
+      itemBuilder: (context, index) => const NewestBooksItem(),
       separatorBuilder: (context, index) => SizedBox(
         height: 15.0.h,
       ),

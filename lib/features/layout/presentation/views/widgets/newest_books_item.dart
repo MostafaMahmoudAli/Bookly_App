@@ -5,8 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class BestSellerItem extends StatelessWidget {
-  const BestSellerItem({Key? key}) : super(key: key);
+class NewestBooksItem extends StatelessWidget {
+  const NewestBooksItem({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
