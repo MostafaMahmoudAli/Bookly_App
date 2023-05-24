@@ -27,7 +27,7 @@ class RowBodyOfBestSellerItem extends StatelessWidget {
           width: MediaQuery.of(context).size.height * 0.01,
         ),
         Text(
-            "4.8",
+          rating.toString(),
             style: GoogleFonts.montserrat(
               textStyle: Theme.of(context).textTheme.titleLarge,
             ),
@@ -36,7 +36,7 @@ class RowBodyOfBestSellerItem extends StatelessWidget {
           width: MediaQuery.of(context).size.height * 0.01,
         ),
         Text(
-            "(2930)",
+            "$count",
             style: GoogleFonts.montserrat(
               textStyle: Theme.of(context).textTheme.titleMedium,
             ),
