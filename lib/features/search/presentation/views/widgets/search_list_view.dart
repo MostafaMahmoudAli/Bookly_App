@@ -12,7 +12,10 @@ class SearchListView extends StatelessWidget {
       padding: EdgeInsets.zero,
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
-      itemBuilder: (context, index) => const NewestBooksItem(),
+      itemBuilder: (context, index) =>const Text("Search"),
+      // const NewestBooksItem(
+      //
+      // ),
       separatorBuilder: (context, index) => SizedBox(
         height: 15.0.h,
       ),

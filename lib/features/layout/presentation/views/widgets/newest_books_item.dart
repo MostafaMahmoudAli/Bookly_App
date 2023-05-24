@@ -1,16 +1,18 @@
-import 'package:bookly_app/core/utils/data_images.dart';
+import 'package:bookly_app/features/layout/data/models/books_model/books_model.dart';
 import 'package:bookly_app/features/layout/presentation/views/widgets/row_body_of_best_seller.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class NewestBooksItem extends StatelessWidget {
-  const NewestBooksItem({Key? key}) : super(key: key);
+   const NewestBooksItem({Key? key,required this.booksModel,}) : super(key: key);
+  final BooksModel?booksModel;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
+      onTap: (){
         GoRouter.of(context).push("/BookDetailsView");
       },
       child: Row(
@@ -18,17 +20,15 @@ class NewestBooksItem extends StatelessWidget {
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.15,
             height: MediaQuery.of(context).size.height * 0.12,
-            child: AspectRatio(
-              aspectRatio: 1 / 2,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10.0.r),
-                  image: const DecorationImage(
-                    image: AssetImage(
-                      DataImages.testImage,
-                    ),
-                    fit: BoxFit.cover,
+            child: ClipRRect(
+              borderRadius:BorderRadius.circular(14.r),
+              child: AspectRatio(
+                aspectRatio: 1 / 2,
+                child: CachedNetworkImage(
+                  imageUrl:booksModel!.volumeInfo!.imageLinks!.thumbnail!,
+                  fit:BoxFit.fill,
+                  errorWidget: (context, url, error) => const Icon(
+                    Icons.error_outline_rounded,
                   ),
                 ),
               ),
@@ -41,7 +41,7 @@ class NewestBooksItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "dnvksdbvkndfn",
+                booksModel!.volumeInfo!.title!,
                 style: GoogleFonts.aBeeZee(
                   fontSize: 20.0.sp,
                 ),
@@ -50,7 +50,7 @@ class NewestBooksItem extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.004,
               ),
               Text(
-                "j.ksmv",
+                booksModel!.volumeInfo!.authors![0],
                 style: GoogleFonts.montserrat(
                   textStyle: Theme.of(context).textTheme.titleMedium,
                 ),
@@ -58,7 +58,10 @@ class NewestBooksItem extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.004,
               ),
-              const RowBodyOfBestSellerItem(),
+               RowBodyOfBestSellerItem(
+                rating:booksModel!.volumeInfo!.averageRating ?? 0,
+                 count:booksModel!.volumeInfo!.ratingsCount ?? 0,
+              ),
             ],
           ),
         ],

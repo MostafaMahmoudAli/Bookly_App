@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:bookly_app/features/layout/data/repos/home_repo.dart';
-
 import 'newest_books_states.dart';
 
 class NewestBooksCubit extends Cubit<NewestBooksStates>

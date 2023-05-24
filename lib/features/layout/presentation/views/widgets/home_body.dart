@@ -45,7 +45,7 @@ class HomeBodyScreen extends StatelessWidget {
             padding: EdgeInsets.symmetric(
               horizontal: 20.0.w,
             ),
-            child: const NewestBooksListViewItem(),
+            child: const NewestBooksListView(),
           ),
         ),
       ],
