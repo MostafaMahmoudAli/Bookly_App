@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:flutter/scheduler.dart';
 
 abstract class Failure
 {

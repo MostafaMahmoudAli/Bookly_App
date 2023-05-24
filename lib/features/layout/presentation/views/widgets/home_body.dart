@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'best_seller_list_view.dart';
+import 'newest_books_list_view.dart';
 import 'feature_list_view.dart';
 
 class HomeBodyScreen extends StatelessWidget {
@@ -45,7 +45,7 @@ class HomeBodyScreen extends StatelessWidget {
             padding: EdgeInsets.symmetric(
               horizontal: 20.0.w,
             ),
-            child: const BestSellerListViewItem(),
+            child: const NewestBooksListView(),
           ),
         ),
       ],

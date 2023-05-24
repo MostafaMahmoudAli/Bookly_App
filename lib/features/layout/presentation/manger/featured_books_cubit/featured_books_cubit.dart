@@ -18,6 +18,7 @@ class FeaturedBooksCubit extends Cubit<FeaturedBooksStates>
             (failure)
         {
           emit(FeaturedBooksErrorState(failure.errMessage));
+          print(failure.errMessage);
         },
             (featuredBooks)
         {
