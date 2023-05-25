@@ -12,7 +12,7 @@ class HomeRepoImpl implements HomeRepo
   final ApiService?apiService;
   HomeRepoImpl(this.apiService);
   @override
-  Future<Either<Failure,List<BooksModel>>> fetchNewestBooks()async {
+  Future<Either<Failure,List<BooksModel>>> fetchNewestBooks()async{
     try
     {
       var data = await apiService!.get(
