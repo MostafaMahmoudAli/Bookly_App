@@ -3,25 +3,28 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../../../layout/data/models/books_model/books_model.dart';
 import 'book_details_list_view.dart';
 
 class ColumnBookDetailsView extends StatelessWidget {
-  const ColumnBookDetailsView({Key? key}) : super(key: key);
+  const ColumnBookDetailsView({Key? key, required this.cDetailsBooks}) : super(key: key);
+   final BooksModel?cDetailsBooks;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Text(
-          "dnvksdbvkndfn",
+          cDetailsBooks!.volumeInfo!.title!,
           style: GoogleFonts.aBeeZee(
             fontSize: 20.0.sp,
           ),
+          textAlign:TextAlign.center,
         ),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.01,
         ),
         Text(
-          "j.ksmv",
+          cDetailsBooks!.volumeInfo?.authors?[0] ?? "_",
           style: GoogleFonts.montserrat(
             textStyle: Theme.of(context).textTheme.titleMedium,
           ),
@@ -29,7 +32,9 @@ class ColumnBookDetailsView extends StatelessWidget {
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.02,
         ),
-        const RowBookDetailsView(),
+         RowBookDetailsView(
+         rBooksModel:cDetailsBooks! ,
+        ),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.07,
         ),
