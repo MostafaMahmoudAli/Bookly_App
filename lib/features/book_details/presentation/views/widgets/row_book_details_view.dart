@@ -1,13 +1,15 @@
+import 'package:bookly_app/features/layout/data/models/books_model/books_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../../core/utils/componants.dart';
+import '../../../../../core/utils/helper_functions.dart';
 
 class RowBookDetailsView extends StatelessWidget {
-  const RowBookDetailsView({Key? key}) : super(key: key);
-
+  const RowBookDetailsView({Key? key, required this.rBooksModel}) : super(key: key);
+  final BooksModel rBooksModel;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -22,14 +24,16 @@ class RowBookDetailsView extends StatelessWidget {
             SizedBox(
               width: MediaQuery.of(context).size.height * 0.018,
             ),
-            Text("4.8",
+            Text(
+                rBooksModel.volumeInfo?.averageRating.toString() ?? "0",
                 style: GoogleFonts.montserrat(
                   textStyle: Theme.of(context).textTheme.titleLarge,
                 )),
             SizedBox(
               width: MediaQuery.of(context).size.height * 0.01,
             ),
-            Text("(2930)",
+            Text(
+                rBooksModel.volumeInfo?.ratingsCount.toString() ?? "0",
                 style: GoogleFonts.montserrat(
                   textStyle: Theme.of(context).textTheme.titleMedium,
                 )),
@@ -43,14 +47,14 @@ class RowBookDetailsView extends StatelessWidget {
           children: [
             Expanded(
               child: CustomActionButton(
-                text: "19.99",
+                text: "Free",
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(8.r),
                   bottomLeft: Radius.circular(8.r),
                 ),
                 backGroundColor: Colors.white,
                 textColor: Colors.black87,
-                onTap: () {},
+                onTap: (){},
               ),
             ),
             Expanded(
@@ -62,7 +66,13 @@ class RowBookDetailsView extends StatelessWidget {
                 ),
                 backGroundColor: Colors.redAccent,
                 textColor: Colors.black87,
-                onTap: () {},
+                onTap: ()async
+                {
+                  customUrlLauncher(
+                      context: context,
+                    url:  rBooksModel.volumeInfo!.previewLink!
+                  );
+                },
               ),
             ),
           ],

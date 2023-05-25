@@ -4,5 +4,5 @@ import 'package:dartz/dartz.dart';
 import '../../../../core/errors/failure.dart';
 
 abstract class DetailsRepo{
-  Future<Either<Failure,List<BooksModel>>>fetchDetailsBooks();
+  Future<Either<Failure,List<BooksModel>>>fetchDetailsBooks({required String category});
 }

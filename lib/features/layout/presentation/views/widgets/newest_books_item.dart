@@ -13,7 +13,7 @@ class NewestBooksItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        GoRouter.of(context).push("/BookDetailsView");
+        GoRouter.of(context).push("/BookDetailsView", extra:booksModel );
       },
       child: Row(
         children: [

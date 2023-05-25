@@ -10,7 +10,7 @@ class DetailsRepoImpl extends DetailsRepo{
   DetailsRepoImpl(this.apiService);
   final ApiService?apiService;
   @override
-  Future<Either<Failure, List<BooksModel>>> fetchDetailsBooks() async
+  Future<Either<Failure, List<BooksModel>>> fetchDetailsBooks({required String category}) async
   {
     try
     {
