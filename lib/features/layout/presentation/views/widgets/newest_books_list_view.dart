@@ -13,7 +13,6 @@ class NewestBooksListView extends StatelessWidget {
     return BlocBuilder<NewestBooksCubit,NewestBooksStates>(
       builder: (context ,state)
       {
-        // BlocProvider.of<NewestBooksCubit>(context).fetchNewestBooks();
         if(state is NewestBooksSuccessState)
         {
           return ListView.separated(

@@ -16,7 +16,7 @@ class DetailsRepoImpl extends DetailsRepo{
     {
       var data = await apiService!.get(endPoint:EndPoints.featuredBookUrl);
       List<BooksModel>detailsBooks=[];
-      for(var item in data["item"])
+      for(var item in data["items"])
       {
         detailsBooks.add(BooksModel.fromJson(item));
       }

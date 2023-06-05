@@ -6,13 +6,13 @@ import 'details_states.dart';
 class DetailsBooksCubit extends Cubit<DetailsBooksStates>{
   DetailsBooksCubit(this.detailsRepo):super(DetailsBooksInitialState());
 
-  final DetailsRepo?detailsRepo;
+  final DetailsRepo detailsRepo;
 
   Future<void>fetchDetailsBooks({required String category})async
   {
     emit(DetailsBooksLoadingState());
 
-    var results = await detailsRepo!.fetchDetailsBooks(category: category);
+    var results = await detailsRepo.fetchDetailsBooks(category: category);
     results.fold(
             (failure)
         {

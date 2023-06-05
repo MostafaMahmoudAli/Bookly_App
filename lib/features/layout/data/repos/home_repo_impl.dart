@@ -9,17 +9,17 @@ import '../../../../core/utils/end_points.dart';
 
 class HomeRepoImpl implements HomeRepo
 {
-  final ApiService?apiService;
+  final ApiService apiService;
   HomeRepoImpl(this.apiService);
   @override
   Future<Either<Failure,List<BooksModel>>> fetchNewestBooks()async{
     try
     {
-      var data = await apiService!.get(
+      var data = await apiService.get(
         endPoint:EndPoints.newestBookUrl,
       );
       List<BooksModel>newestBooks=[];
-      for(var item in data["item"])
+      for(var item in data["items"])
       {
         newestBooks.add(BooksModel.fromJson(item));
       }
@@ -43,9 +43,9 @@ class HomeRepoImpl implements HomeRepo
   Future<Either<Failure, List<BooksModel>>> fetchFeaturedBooks()async {
     try
     {
-      var data = await apiService!.get(endPoint: EndPoints.featuredBookUrl);
+      var data = await apiService.get(endPoint: EndPoints.featuredBookUrl);
       List<BooksModel>featuredBooks =[];
-      for(var item in data["item"])
+      for(var item in data["items"])
       {
         featuredBooks.add(BooksModel.fromJson(item));
       }
@@ -53,10 +53,10 @@ class HomeRepoImpl implements HomeRepo
     }
     catch(e)
     {
-      // if(e is DioError)
-      // {
-      //   return left(ServerFailure.fromDioError(e));
-      // }
+      if(e is DioError)
+      {
+        return left(ServerFailure.fromDioError(e));
+      }
       return left(ServerFailure(e.toString()));
     }
   }

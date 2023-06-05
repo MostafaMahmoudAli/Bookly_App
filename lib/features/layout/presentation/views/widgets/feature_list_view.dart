@@ -25,7 +25,8 @@ class FeaturedListView extends StatelessWidget {
               physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) =>  FeaturedListViewItem(
-                imageUrl: state.featuredBooks[index].volumeInfo!.imageLinks!.thumbnail,
+                imageUrl: state.featuredBooks[index].volumeInfo!.imageLinks?.thumbnail ?? '-'
+                    ,
               ),
               separatorBuilder: (BuildContext context, int index) => SizedBox(
                 width: 10.0.w,

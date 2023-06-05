@@ -1,7 +1,5 @@
 import 'package:bookly_app/core/utils/data_images.dart';
-import 'package:bookly_app/features/layout/presentation/manger/featured_books_cubit/featured_books_cubit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 

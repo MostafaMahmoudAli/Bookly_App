@@ -32,7 +32,7 @@ class CustomActionButton extends StatelessWidget {
             style: GoogleFonts.montserrat(
               textStyle: Theme.of(context).textTheme.titleLarge!.copyWith(
                     color: textColor,
-                  ),
+              ),
             ),
           ),
         ),

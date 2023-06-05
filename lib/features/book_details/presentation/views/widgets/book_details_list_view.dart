@@ -21,9 +21,12 @@ class BookDetailsListView extends StatelessWidget {
            child: ListView.separated(
              physics: const BouncingScrollPhysics(),
              scrollDirection: Axis.horizontal,
-             itemBuilder: (context, index) =>  FeaturedListViewItem(
+             itemBuilder: (context, index) {
+               print('ahmed ${state.detailsBooks[index].volumeInfo?.imageLinks?.thumbnail}');
+               return FeaturedListViewItem(
               imageUrl: state.detailsBooks[index].volumeInfo?.imageLinks?.thumbnail ?? "_",
-             ),
+             );
+             },
              separatorBuilder: (BuildContext context, int index) => SizedBox(
                width: 10.0.w,
              ),
