@@ -37,32 +37,34 @@ class NewestBooksItem extends StatelessWidget {
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.06,
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                booksModel!.volumeInfo!.title!,
-                style: GoogleFonts.aBeeZee(
-                  fontSize: 20.0.sp,
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  booksModel!.volumeInfo!.title!,
+                  style: GoogleFonts.aBeeZee(
+                    fontSize: 20.0.sp,
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.004,
-              ),
-              Text(
-                booksModel!.volumeInfo!.authors![0],
-                style: GoogleFonts.montserrat(
-                  textStyle: Theme.of(context).textTheme.titleMedium,
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.004,
                 ),
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.004,
-              ),
-               RowBodyOfBestSellerItem(
-                rating:booksModel!.volumeInfo!.averageRating ?? 0,
-                 count:booksModel!.volumeInfo!.ratingsCount ?? 0,
-              ),
-            ],
+                Text(
+                  booksModel!.volumeInfo!.authors![0],
+                  style: GoogleFonts.montserrat(
+                    textStyle: Theme.of(context).textTheme.titleMedium,
+                  ),
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.004,
+                ),
+                 RowBodyOfBestSellerItem(
+                  rating:booksModel!.volumeInfo!.averageRating ?? 0,
+                   count:booksModel!.volumeInfo!.ratingsCount ?? 0,
+                ),
+              ],
+            ),
           ),
         ],
       ),

@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class RowBodyOfBestSellerItem extends StatelessWidget {
   const RowBodyOfBestSellerItem({Key? key,required this.rating,required this.count}) : super(key: key);
-  final int?rating;
+  final num?rating;
   final int?count;
   @override
   Widget build(BuildContext context) {
